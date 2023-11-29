@@ -20,7 +20,7 @@ $tiny: "screen and (max-width: 426px)";
     --side-padding: 1em;
     //
     --color-link: orangered;
-    --color-hover: gold;
+    --color-hover: darkcyan;
     --color-link-visited: darkcyan;
     --trans300: ease all 300ms;
     //
@@ -124,5 +124,6 @@ h6 {
 @import "../components/our-services/styles";
 @import "../components/whoweare/styles";
 @import "../components/projects/styles";
+@import "../components/get-free-consultations/styles";
 @import "../components/team-members/styles";
 @import "../components/footer/styles";

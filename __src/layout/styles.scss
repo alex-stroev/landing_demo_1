@@ -51,6 +51,10 @@ body {
     text-shadow: none;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 //////////////////////////////////////////////////////////////////////////////
 // Reset headers
 //////////////////////////////////////////////////////////////////////////////
@@ -112,10 +116,6 @@ h6 {
     overflow-y: hidden;
 }
 
-.testtypo {
-    font-size: 20px;
-    @include fluid_typo_auto(1280, 20, 16);
-}
 
 //////////////////////////////////////////////////////////////////////////////
 //  Components
@@ -126,4 +126,5 @@ h6 {
 @import "../components/projects/styles";
 @import "../components/get-free-consultations/styles";
 @import "../components/team-members/styles";
+@import "../components/subscribe/styles";
 @import "../components/footer/styles";

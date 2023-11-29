@@ -249,6 +249,10 @@ body {
   text-shadow: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -287,20 +291,6 @@ h6 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow-y: hidden;
-}
-
-.testtypo {
-  font-size: 20px;
-}
-@media screen and (max-width: 1280px) {
-  .testtypo {
-    font-size: 1.5625vw;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .testtypo {
-    font-size: 16px;
-  }
 }
 
 .our-services {
@@ -605,12 +595,11 @@ h6 {
   min-width: 284px;
 }
 .get-free-consultations__button a {
+  padding: 30px 10px;
   text-decoration: none;
   display: block;
   color: #fff;
   text-align: center;
-  box-sizing: border-box;
-  padding: 30px 10px;
   border-radius: 2px;
   background-color: var(--color-red);
   font-size: 18px;
@@ -672,6 +661,58 @@ h6 {
   line-height: 1;
   letter-spacing: -0.36px;
   padding-bottom: 28px;
+}
+
+.subscribe {
+  max-width: 1264px;
+  margin: 128px auto 108px;
+  background-color: #f3f3f3;
+  padding: 84px 24px;
+}
+.subscribe__kernel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe__header {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  padding-bottom: 0.7142857143em;
+}
+.subscribe__text {
+  color: #000;
+  font-family: var(--ff-adv);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+}
+.subscribe__info {
+  width: 539px;
+  padding-right: 80px;
+  border-right: 1px solid #000;
+}
+.subscribe__button {
+  width: 260px;
+  padding-left: 80px;
+}
+.subscribe__button a {
+  padding: 18px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  background-color: var(--color-red);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  transition: var(--trans300);
+}
+.subscribe__button a:hover, .subscribe__button a:active {
+  background-color: var(--color-hover);
 }
 
 .footer-back {

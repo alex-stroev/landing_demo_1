@@ -1,0 +1,85 @@
+@function strip-unit($number) {
+    @if type-of($number) == "number" and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+/////////////////////////////////////////////////////////////
+/// Вспомнить назначение
+/////////////////////////////////////////////////////////////
+@mixin fs($fs, $lh) {
+    font-size: strip-unit($fs) * 1px;
+    line-height: (strip-unit($lh) / strip-unit($fs));
+}
+
+/////////////////////////////////////////////////////////////
+/// Типографика
+/////////////////////////////////////////////////////////////
+@mixin fluid_typo($startwidth, $startsize, $endwidth, $endsize) {
+    $startwidth: (strip-unit($startwidth));
+    $startsize: (strip-unit($startsize));
+    $endwidth: (strip-unit($endwidth));
+    $endsize: (strip-unit($endsize));
+
+    @media screen and (max-width: ($startwidth * 1px)) {
+        font-size: ($startsize/$startwidth * 100vw);
+    }
+
+    @media screen and (max-width: ($endwidth * 1px)) {
+        font-size: ($endsize * 1px);
+    }
+}
+
+/////////////////////////////////////////////////////////////
+/// Типографика - авто
+/////////////////////////////////////////////////////////////
+@mixin fluid_typo_auto($startwidth, $startsize, $endsize) {
+    $startwidth: (strip-unit($startwidth));
+    $startsize: (strip-unit($startsize));
+    $endsize: (strip-unit($endsize));
+    $endwidth: round($startwidth * $endsize/$startsize);
+
+    @media screen and (max-width: ($startwidth * 1px)) {
+        font-size: ($startsize/$startwidth * 100vw);
+    }
+
+    @media screen and (max-width: ($endwidth * 1px)) {
+        font-size: ($endsize * 1px);
+    }
+}
+
+/////////////////////////////////////////////////////////////
+///
+/////////////////////////////////////////////////////////////
+
+@mixin text_link_bg($c1: red, $c2: lime, $trans: 300ms) {
+    overflow: hidden;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+
+    background-image: linear-gradient(to right, $c2, $c2 50%, $c1 50%);
+    background-origin: padding-box;
+    background-position: 100%;
+    background-repeat: repeat;
+    background-size: 200% 100%;
+    background-clip: text;
+    transition: background-position $trans ease-out;
+
+    &:hover,
+    &:active {
+        background-position: 0;
+    }
+}
+
+/////////////////////////////////////////////////////////////
+///
+/////////////////////////////////////////////////////////////
+/// 
+@mixin abs100 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

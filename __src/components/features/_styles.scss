@@ -1,6 +1,11 @@
 .features {
-    max-width: (293px * 3) + 220;
-    margin: 140px auto;
+    margin: 140px 0;
+    background: url("../img/dots_red.svg") top 24px left no-repeat;
+
+    &__kernel {
+        max-width: (293px * 3) + 220;
+        margin: 0 auto;
+    }
 
     &__preheader {
         color: var(--color-red);

@@ -358,8 +358,12 @@ h6 {
 }
 
 .features {
+  margin: 140px 0;
+  background: url("../img/dots_red.svg") top 24px left no-repeat;
+}
+.features__kernel {
   max-width: 1099px;
-  margin: 140px auto;
+  margin: 0 auto;
 }
 .features__preheader {
   color: var(--color-red);

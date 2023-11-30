@@ -293,6 +293,70 @@ h6 {
   overflow-y: hidden;
 }
 
+.hero {
+  background-color: var(--color-dark);
+  color: #fff;
+  margin-bottom: 140px;
+  padding-top: 56px;
+  background-image: url("../img/dots_white.svg"), url("../img/dots_white.svg");
+  background-position: bottom 24px left, right 12px top 24px;
+  background-repeat: no-repeat, no-repeat;
+}
+.hero__kernel {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__header {
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+.hero__header span {
+  color: var(--color-red);
+}
+.hero__text {
+  color: #f4f3f3;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 1.5em 0;
+}
+.hero__button {
+  width: 164px;
+}
+.hero__button a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  background-color: var(--color-red);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  transition: var(--trans300);
+  padding: 18px;
+}
+.hero__button a:hover, .hero__button a:active {
+  background-color: var(--color-hover);
+}
+.hero__info {
+  flex: 1 1 0;
+}
+.hero__pic {
+  flex: 1 1 0;
+}
+.hero__pic img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .our-services {
   background-color: var(--color-dark);
   color: #fff;

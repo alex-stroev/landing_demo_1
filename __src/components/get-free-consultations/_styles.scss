@@ -1,7 +1,14 @@
 .get-free-consultations {
+    --spad: 48px;
+
     background-color: var(--color-dark);
     color: #fff;
     padding: 128px 0;
+
+    @media (max-width: 768px) {
+        padding: 6vw 0;
+    }
+
     margin: 128px 0;
     background: url("../img/get-free-consultations/bg_colored.jpg") 50% 50%
         no-repeat;
@@ -36,14 +43,24 @@
     }
 
     &__kernel {
-        max-width: (649px + 198 + 284);
+        max-width: (649px + 198 + 284 + 48 * 2);
         margin: 0 auto;
+        padding: 0 var(--spad);
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 198px;
         position: relative;
         z-index: 2;
+
+        @media (max-width: 1200px) {
+            gap: (198/1200 * 100vw);
+        }
+
+        @media (max-width: 768px) {
+            gap: 4vw;
+            flex-direction: column;
+        }
     }
 
     &__cta {
@@ -52,6 +69,8 @@
         font-size: 42px;
         font-weight: 700;
         line-height: 1/5;
+
+        @include fluid_typo_auto(1200, 42, 24);
     }
 
     &__button {
@@ -60,6 +79,10 @@
         a {
             padding: 30px 10px;
             @include button;
+
+            @media (max-width: 768px) {
+                padding: 3vw 6px;
+            }
         }
     }
 }

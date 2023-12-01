@@ -899,6 +899,7 @@ h6 {
 }
 
 .get-free-consultations {
+  --spad: 48px;
   background-color: var(--color-dark);
   color: #fff;
   padding: 128px 0;
@@ -906,6 +907,11 @@ h6 {
   background: url("../img/get-free-consultations/bg_colored.jpg") 50% 50% no-repeat;
   background-size: cover;
   position: relative;
+}
+@media (max-width: 768px) {
+  .get-free-consultations {
+    padding: 6vw 0;
+  }
 }
 .get-free-consultations::after {
   content: "";
@@ -929,8 +935,9 @@ h6 {
   }
 }
 .get-free-consultations__kernel {
-  max-width: 1131px;
+  max-width: 1227px;
   margin: 0 auto;
+  padding: 0 var(--spad);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -938,12 +945,33 @@ h6 {
   position: relative;
   z-index: 2;
 }
+@media (max-width: 1200px) {
+  .get-free-consultations__kernel {
+    gap: 16.5vw;
+  }
+}
+@media (max-width: 768px) {
+  .get-free-consultations__kernel {
+    gap: 4vw;
+    flex-direction: column;
+  }
+}
 .get-free-consultations__cta {
   flex: 1 1 0;
   color: #fff;
   font-size: 42px;
   font-weight: 700;
   line-height: 1/5;
+}
+@media screen and (max-width: 1200px) {
+  .get-free-consultations__cta {
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-width: 686px) {
+  .get-free-consultations__cta {
+    font-size: 24px;
+  }
 }
 .get-free-consultations__button {
   min-width: 284px;
@@ -963,6 +991,11 @@ h6 {
 }
 .get-free-consultations__button a:hover, .get-free-consultations__button a:active {
   background-color: var(--color-hover);
+}
+@media (max-width: 768px) {
+  .get-free-consultations__button a {
+    padding: 3vw 6px;
+  }
 }
 
 .team-members {

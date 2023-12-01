@@ -3,6 +3,7 @@ $team_members_grig_toggle_n: 480px;
 
 .team-members {
     --spadd: 16px;
+    overflow: hidden;
 
     $gap1024: 16/1024 * 100vw;
 
@@ -56,6 +57,7 @@ $team_members_grig_toggle_n: 480px;
 }
 
 .team-member {
+    visibility: hidden;
     &__photo {
         border-radius: 12px 12px 0 0;
         overflow: hidden;

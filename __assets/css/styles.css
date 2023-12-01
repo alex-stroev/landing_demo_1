@@ -1074,6 +1074,7 @@ h6 {
 
 .team-members {
   --spadd: 16px;
+  overflow: hidden;
   background: url("../img/dots_red.svg") 0 100% no-repeat;
   margin: 128px 0;
 }
@@ -1122,6 +1123,9 @@ h6 {
   }
 }
 
+.team-member {
+  visibility: hidden;
+}
 .team-member__photo {
   border-radius: 12px 12px 0 0;
   overflow: hidden;

@@ -1,0 +1,92 @@
+.about {
+    max-width: 1060px;
+    margin: 140px auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 72px;
+
+    &__kv {
+        flex: 1 1 0;
+    }
+
+    &__info {
+        flex: 1 1 0;
+    }
+
+    &__preheader {
+        color: var(--color-red);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 4.2px;
+        padding-bottom: (18em/20);
+    }
+    &__header {
+        color: #031333;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        padding-bottom: (28em/48);
+    }
+    &__text {
+        color: #818181;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        padding-bottom: (24em/16);
+    }
+    &__button {
+        padding-bottom: 1rem;
+        a {
+            @include button;
+            padding: 18px;
+            display: inline-block;
+        }
+    }
+}
+
+.about-kv {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    height: 100%;
+
+    &__pic1 {
+        //
+    }
+
+    &__pic1-container {
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            content: "";
+            width: 112px;
+            aspect-ratio: 1/1;
+            background: url("../img/dots_red_sq.svg") 0 0 no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateX(-30%) translateY(80%);
+        }
+    }
+
+    &__pic2 {
+        align-self: last baseline;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}

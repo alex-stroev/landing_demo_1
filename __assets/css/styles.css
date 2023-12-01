@@ -417,11 +417,103 @@ h6 {
   line-height: 160%;
 }
 
+.about {
+  max-width: 1060px;
+  margin: 140px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 72px;
+}
+.about__kv {
+  flex: 1 1 0;
+}
+.about__info {
+  flex: 1 1 0;
+}
+.about__preheader {
+  color: var(--color-red);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 4.2px;
+  padding-bottom: 0.9em;
+}
+.about__header {
+  color: #031333;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  padding-bottom: 0.5833333333em;
+}
+.about__text {
+  color: #818181;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding-bottom: 1.5em;
+}
+.about__button {
+  padding-bottom: 1rem;
+}
+.about__button a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  background-color: var(--color-red);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  transition: var(--trans300);
+  padding: 18px;
+  display: inline-block;
+}
+.about__button a:hover, .about__button a:active {
+  background-color: var(--color-hover);
+}
+
+.about-kv {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+}
+.about-kv__pic1-container {
+  position: relative;
+}
+.about-kv__pic1-container img {
+  position: relative;
+  z-index: 2;
+}
+.about-kv__pic1-container::after {
+  content: "";
+  width: 112px;
+  aspect-ratio: 1/1;
+  background: url("../img/dots_red_sq.svg") 0 0 no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-30%) translateY(80%);
+}
+.about-kv__pic2 {
+  align-self: last baseline;
+}
+.about-kv img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .our-services {
   background-color: var(--color-dark);
   color: #fff;
   padding: 120px 0;
-  margin: 96px 0 160px;
+  margin: 140px 0 160px;
 }
 .our-services__kernel {
   max-width: 1080px;

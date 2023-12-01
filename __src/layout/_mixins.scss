@@ -118,6 +118,7 @@
     letter-spacing: 4.2px;
     text-align: center;
     margin-bottom: 20px;
+    padding: 0 1em;
 
     @include fluid_typo_auto(1024, 20, 14);
 
@@ -134,6 +135,7 @@
     font-weight: 600;
     line-height: 1.4;
     margin-bottom: (80em/38);
+    padding: 0 1em;
 
     @include fluid_typo_auto(1024, 38, 24);
 

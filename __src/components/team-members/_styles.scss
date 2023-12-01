@@ -2,13 +2,11 @@ $team_members_grig_toggle: 768px;
 $team_members_grig_toggle_n: 480px;
 
 .team-members {
-    --gap: 32px;
-    --spadd: 32px;
+    --spadd: 16px;
 
-    $gap1024: 32/1024 * 100vw;
+    $gap1024: 16/1024 * 100vw;
 
     @media (max-width: 1024px) {
-        --gap: #{$gap1024};
         --spadd: #{$gap1024};
     }
 
@@ -20,9 +18,7 @@ $team_members_grig_toggle_n: 480px;
     }
 
     &__kernel {
-        max-width: (
-            370px * 3 + 32 * 2 + 32 * 2
-        ); // sum of widths, gaps and paddings
+        max-width: (370px * 3 + 32 * 4); // sum of widths, gaps and paddings
         margin: 0 auto;
         padding: 0 var(--spadd);
     }
@@ -38,24 +34,27 @@ $team_members_grig_toggle_n: 480px;
     &__grid {
         display: flex;
         justify-content: space-between;
-        gap: var(--gap);
 
         @media (max-width: #{$team_members_grig_toggle}) {
             flex-wrap: wrap;
             justify-content: center;
         }
     }
+
+    &__grid-item {
+        padding: 0 var(--spadd);
+
+        @media (max-width: #{$team_members_grig_toggle}) {
+            width: 50%;
+        }
+
+        @media (max-width: #{$team_members_grig_toggle_n}) {
+            width: auto;
+        }
+    }
 }
 
 .team-member {
-    @media (max-width: #{$team_members_grig_toggle}) {
-        width: 45%;
-    }
-
-    @media (max-width: #{$team_members_grig_toggle_n}) {
-        width: auto;
-    }
-
     &__photo {
         border-radius: 12px 12px 0 0;
         overflow: hidden;

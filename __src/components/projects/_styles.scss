@@ -1,32 +1,37 @@
 .projects {
-    max-width: 1600px;
+    $gap_mobile: (32/1440 * 100vw);
+    --gap: 32px;
+
+    @media (max-width: 1440px) {
+        --gap: #{$gap_mobile};
+    }
+
+    max-width: (383px * 4 + 32 * 5);
+    padding: 0 var(--gap);
     margin: 128px auto;
     padding-top: 72px;
 
     &__latest {
-        color: var(--color-red);
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1;
-        letter-spacing: 4.2px;
-        text-align: center;
-        padding-bottom: (24em/20);
+        @extend .header_red;
     }
 
     &__look {
-        color: #031333;
-        text-align: center;
-        font-size: 38px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        padding-bottom: (86em/38);
+        @extend .header_black;
     }
 
     &__grid {
-        display: flex;
-        justify-content: space-between;
-        gap: 28px;
+        display: grid;
+        gap: var(--gap);
+
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        @media (max-width: 1440px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 }
 
@@ -39,7 +44,12 @@
     justify-content: flex-end;
     aspect-ratio: 383/464;
     box-sizing: border-box;
-    padding: 32px 36px 32px 42px;
+
+    // типографика тут - ТОЛЬКО для паддингов!
+    font-size: 16px;
+    padding: (32em/16) (36em/16) (32em/16) (42em/16);
+
+    @include fluid_typo_auto(1600, 16, 10);
 
     &__pic {
         @include abs100;
@@ -70,6 +80,8 @@
         padding-bottom: 12px;
         position: relative;
         z-index: 2;
+        @include fluid_typo_auto(1600, 30, 18);
+        @include fluid_typo_auto(600, 30, 18);
     }
 
     &__text {
@@ -77,5 +89,7 @@
         line-height: 160%;
         position: relative;
         z-index: 2;
+        @include fluid_typo_auto(1200, 16, 14);
+        @include fluid_typo_auto(600, 16, 14);
     }
 }

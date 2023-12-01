@@ -293,6 +293,93 @@ h6 {
   overflow-y: hidden;
 }
 
+.header {
+  background-color: #fff;
+}
+.header.i-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.header__kernel {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  transition: all 0.3s ease;
+}
+.header.i-fixed .header__kernel {
+  padding: 0 0;
+}
+.header__logo {
+  width: 88px;
+}
+.header__menu {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+}
+.header__menu a {
+  margin: 0 29px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+.header__menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+.header__menu a:hover, .header__menu a:active, .header__menu a.i-active {
+  color: var(--color-red);
+}
+.header__menu a:hover::after, .header__menu a:active::after, .header__menu a.i-active::after {
+  background-color: var(--color-red);
+  width: 100%;
+}
+.header__button {
+  width: 200px;
+  text-align: right;
+}
+.header__button a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  background-color: var(--color-red);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  transition: var(--trans300);
+  display: inline-block;
+  padding: 14px 18px;
+}
+.header__button a:hover, .header__button a:active {
+  background-color: var(--color-hover);
+}
+.header.i-fixed .header__button a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 14px;
+}
+
 .hero {
   background-color: var(--color-dark);
   color: #fff;

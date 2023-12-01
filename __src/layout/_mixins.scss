@@ -143,3 +143,10 @@
         margin-bottom: 1em;
     }
 }
+
+@mixin mobile_vertical_rhythm {
+    @media (max-width: 1200px) {
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+    }
+}

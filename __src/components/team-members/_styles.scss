@@ -12,6 +12,7 @@ $team_members_grig_toggle_n: 480px;
 
     background: url("../img/dots_red.svg") 0 100% no-repeat;
     margin: 128px 0;
+    @include mobile_vertical_rhythm;
 
     @media (max-width: 1200px) {
         background-position: 0 50%;

@@ -5,9 +5,7 @@
     color: #fff;
     padding: 128px 0;
 
-    @media (max-width: 768px) {
-        padding: 6vw 0;
-    }
+    @include mobile_vertical_rhythm;
 
     margin: 128px 0;
     background: url("../img/get-free-consultations/bg_colored.jpg") 50% 50%

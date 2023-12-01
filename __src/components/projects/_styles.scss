@@ -8,8 +8,8 @@
 
     max-width: (383px * 4 + 32 * 5);
     padding: 0 var(--gap);
-    margin: 128px auto;
-    padding-top: 72px;
+    margin: 200px auto 128px;
+    @include mobile_vertical_rhythm;
 
     &__latest {
         @extend .header_red;

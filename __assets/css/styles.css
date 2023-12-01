@@ -180,7 +180,7 @@ template {
   display: none;
 }
 
-.header_red, .team-members__meet, .projects__latest {
+.header_red, .team-members__meet, .projects__latest, .whoweare__preheader {
   color: var(--color-red);
   font-size: 20px;
   font-style: normal;
@@ -192,22 +192,22 @@ template {
   padding: 0 1em;
 }
 @media screen and (max-width: 1024px) {
-  .header_red, .team-members__meet, .projects__latest {
+  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader {
     font-size: 1.953125vw;
   }
 }
 @media screen and (max-width: 717px) {
-  .header_red, .team-members__meet, .projects__latest {
+  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader {
     font-size: 14px;
   }
 }
 @media (max-width: 1024px) {
-  .header_red, .team-members__meet, .projects__latest {
+  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader {
     margin-bottom: 1em;
   }
 }
 
-.header_black, .team-members__title, .projects__look {
+.header_black, .team-members__title, .projects__look, .whoweare__header {
   color: #031333;
   text-align: center;
   font-size: 38px;
@@ -218,17 +218,17 @@ template {
   padding: 0 1em;
 }
 @media screen and (max-width: 1024px) {
-  .header_black, .team-members__title, .projects__look {
+  .header_black, .team-members__title, .projects__look, .whoweare__header {
     font-size: 3.7109375vw;
   }
 }
 @media screen and (max-width: 647px) {
-  .header_black, .team-members__title, .projects__look {
+  .header_black, .team-members__title, .projects__look, .whoweare__header {
     font-size: 24px;
   }
 }
 @media (max-width: 1024px) {
-  .header_black, .team-members__title, .projects__look {
+  .header_black, .team-members__title, .projects__look, .whoweare__header {
     margin-bottom: 1em;
   }
 }
@@ -734,29 +734,45 @@ h6 {
   max-width: 1264px;
   margin: 160px auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 72px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 1200px) {
+  .whoweare {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+  }
+}
+@media (max-width: 1024px) {
+  .whoweare {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 .whoweare__kv {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .whoweare__kv {
+    width: 65%;
+    margin-left: 10%;
+  }
+}
 .whoweare__preheader {
-  color: var(--color-red);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 4.2px;
-  padding-bottom: 0.9em;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 18px;
+}
+@media (max-width: 1024px) {
+  .whoweare__info {
+    padding: 0 3.125vw;
+  }
 }
 .whoweare__header {
-  color: #031333;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
-  padding-bottom: 0.5833333333em;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 0.5833333333em;
 }
 .whoweare__text {
   color: #818181;
@@ -824,12 +840,17 @@ h6 {
   --gap: 32px;
   max-width: 1692px;
   padding: 0 var(--gap);
-  margin: 128px auto;
-  padding-top: 72px;
+  margin: 200px auto 128px;
 }
 @media (max-width: 1440px) {
   .projects {
     --gap: 2.2222222222vw;
+  }
+}
+@media (max-width: 1200px) {
+  .projects {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
   }
 }
 .projects__grid {
@@ -960,9 +981,10 @@ h6 {
   background-size: cover;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .get-free-consultations {
-    padding: 6vw 0;
+    margin-top: 6vw;
+    margin-bottom: 6vw;
   }
 }
 .get-free-consultations::after {
@@ -1058,6 +1080,12 @@ h6 {
 @media (max-width: 1024px) {
   .team-members {
     --spadd: 1.5625vw;
+  }
+}
+@media (max-width: 1200px) {
+  .team-members {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
   }
 }
 @media (max-width: 1200px) {

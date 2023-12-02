@@ -1,37 +1,46 @@
 .our-services {
-    $gap: 52;
+    --sidepadd: 32px;
+    --gap: 52px;
+
+    $sp_mob: (32vw/1024 * 100);
+
+    @media (max-width: 1024px) {
+        --sidepadd: #{$sp_mob};
+        --gap: #{$sp_mob};
+    }
+
     background-color: var(--color-dark);
     color: #fff;
-    padding: 120px 0;
+    padding: 120px var(--sidepadd);
     margin: 140px 0 160px;
+    @include mobile_vertical_rhythm;
+
+    @media (max-width: 768px) {
+        padding: 10vw var(--sidepadd);
+    }
 
     &__kernel {
-        max-width: (514px * 2 + $gap);
+        max-width: (514px * 2 + 52);
         margin: 0 auto;
     }
 
     &__preheader {
-        text-align: center;
-        color: var(--color-red);
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 100%;
-        letter-spacing: 4.2px;
-        padding-bottom: (20em/18);
+        @extend .header_red;
     }
 
     &__header {
-        text-align: center;
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 140%;
-        padding-bottom: (72em/48);
+        @extend .header_black;
+        color: #fff;
     }
 
     &__grid {
         display: flex;
-        gap: ($gap * 1px);
+        gap: var(--gap);
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -42,7 +51,14 @@
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
-    padding: 40px 80px 80px 40px;
+    font-size: 10px; // for paddings only
+    padding: 4em 8em 8em 4em;
+
+    @include fluid_typo_auto(1200, 10, 4);
+
+    @media (max-width: 768px) {
+        padding: 4em 4em 6em 4em;
+    }
 
     &__pic {
         @include abs100;
@@ -75,6 +91,8 @@
         font-weight: 600;
         line-height: 140%;
         padding-bottom: (20em/30);
+
+        @include fluid_typo_auto(768, 30, 20);
     }
 
     &__text {
@@ -82,5 +100,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 160%;
+
+        @include fluid_typo_auto(400, 16, 14);
     }
 }

@@ -3,17 +3,26 @@
 }
 
 .site-footer {
-    max-width: 1264px;
+    --gap: 32px;
+
+    max-width: (1264px + 32 * 2);
     margin: 0 auto;
     color: #fff;
-    padding: 72px 0 48px;
+    padding: 72px var(--gap) 48px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 768px) {
+        display: block;
+    }
+
     &__info {
         flex: 1 1 0;
+        @media (max-width: 768px) {
+            padding-bottom: 4em;
+        }
     }
 
     &__nav {
@@ -27,6 +36,8 @@
         line-height: 1.8;
         padding: 24px 0 40px;
         max-width: 340px;
+
+        @include fluid_typo_auto(1024, 20, 16);
     }
 
     &__socials {
@@ -39,6 +50,8 @@
             border-radius: 50%;
             transition: 0.3s all ease-in-out;
             margin-right: 0.75em;
+
+            @include fluid_typo_auto(1024, 32, 24);
 
             &:hover,
             &:active {
@@ -53,6 +66,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     font-family: var(--ff-adv);
     font-size: 18px;
+
+    @media (max-width: 360px) {
+        display: block;
+    }
 
     &__title {
         margin-bottom: 30px;

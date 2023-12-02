@@ -1,13 +1,23 @@
 .subscribe {
+    $toggle: "(max-width: 768px)";
     max-width: 1264px;
     margin: 128px auto 108px;
     background-color: #f3f3f3;
     padding: 84px 24px;
+    @include mobile_vertical_rhythm;
+
+    @media #{$toggle} {
+        padding: 10vw 24px;
+    }
 
     &__kernel {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media #{$toggle} {
+            display: block;
+        }
     }
 
     &__header {
@@ -16,6 +26,8 @@
         font-weight: 600;
         line-height: 160%;
         padding-bottom: (20em/28);
+
+        @include fluid_typo_auto(768, 20, 16);
     }
 
     &__text {
@@ -31,6 +43,12 @@
         width: (459px + 80);
         padding-right: 80px;
         border-right: 1px solid #000;
+
+        @media #{$toggle} {
+            width: auto;
+            border-right: none;
+            padding-right: 0;
+        }
     }
 
     &__button {
@@ -40,6 +58,17 @@
         a {
             padding: 18px;
             @include button;
+        }
+
+        @media #{$toggle} {
+            width: auto;
+            text-align: center;
+            padding-left: 0;
+            padding-top: 4em;
+
+            a {
+                display: inline-block;
+            }
         }
     }
 }

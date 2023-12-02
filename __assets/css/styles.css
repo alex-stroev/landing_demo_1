@@ -1174,10 +1174,26 @@ h6 {
   background-color: #f3f3f3;
   padding: 84px 24px;
 }
+@media (max-width: 1200px) {
+  .subscribe {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+  }
+}
+@media (max-width: 768px) {
+  .subscribe {
+    padding: 10vw 24px;
+  }
+}
 .subscribe__kernel {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .subscribe__kernel {
+    display: block;
+  }
 }
 .subscribe__header {
   font-size: 28px;
@@ -1185,6 +1201,16 @@ h6 {
   font-weight: 600;
   line-height: 160%;
   padding-bottom: 0.7142857143em;
+}
+@media screen and (max-width: 768px) {
+  .subscribe__header {
+    font-size: 2.6041666667vw;
+  }
+}
+@media screen and (max-width: 614px) {
+  .subscribe__header {
+    font-size: 16px;
+  }
 }
 .subscribe__text {
   color: #000;
@@ -1198,6 +1224,13 @@ h6 {
   width: 539px;
   padding-right: 80px;
   border-right: 1px solid #000;
+}
+@media (max-width: 768px) {
+  .subscribe__info {
+    width: auto;
+    border-right: none;
+    padding-right: 0;
+  }
 }
 .subscribe__button {
   width: 260px;
@@ -1218,6 +1251,17 @@ h6 {
 }
 .subscribe__button a:hover, .subscribe__button a:active {
   background-color: var(--color-hover);
+}
+@media (max-width: 768px) {
+  .subscribe__button {
+    width: auto;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 4em;
+  }
+  .subscribe__button a {
+    display: inline-block;
+  }
 }
 
 .footer-back {

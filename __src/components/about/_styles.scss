@@ -1,10 +1,25 @@
 .about {
-    max-width: 1060px;
+    --spadd: 32px;
+    $spadd: (32/1024 * 100vw);
+
+    @media (max-width: 1024px) {
+        --spadd: #{$spadd};
+    }
+
+    max-width: (1060px + 64);
     margin: 140px auto;
+    @include mobile_vertical_rhythm;
+
+    padding: 0 var(--spadd);
 
     display: flex;
     justify-content: space-between;
     gap: 72px;
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        gap: var(--spadd);
+    }
 
     &__kv {
         flex: 1 1 0;
@@ -15,22 +30,23 @@
     }
 
     &__preheader {
-        color: var(--color-red);
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 100%;
-        letter-spacing: 4.2px;
-        padding-bottom: (18em/20);
+        @extend .header_red;
+        text-align: left;
+        padding-left: 0;
     }
+
     &__header {
+        // тут без миксина
         color: #031333;
         font-size: 48px;
         font-style: normal;
         font-weight: 600;
         line-height: 140%;
         padding-bottom: (28em/48);
+
+        @include fluid_typo_auto(1024, 48, 24);
     }
+
     &__text {
         color: #818181;
         font-size: 16px;
@@ -39,6 +55,7 @@
         line-height: 160%;
         padding-bottom: (24em/16);
     }
+
     &__button {
         padding-bottom: 1rem;
         a {
@@ -55,17 +72,21 @@
     gap: 24px;
     height: 100%;
 
+    @media (max-width: 414px) {
+        flex-direction: column;
+    }
+
+    img {
+        position: relative;
+        z-index: 2;
+    }
+
     &__pic1 {
         //
     }
 
     &__pic1-container {
         position: relative;
-
-        img {
-            position: relative;
-            z-index: 2;
-        }
 
         &::after {
             content: "";

@@ -501,6 +501,7 @@ h6 {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+    justify-content: flex-start;
   }
 }
 .header__logo {

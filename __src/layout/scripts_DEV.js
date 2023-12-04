@@ -15,6 +15,8 @@ function scroll2anchor(e) {
     e.preventDefault();
     const aim = e.target.getAttribute("href");
     gsap.to(window, { duration: 1, scrollTo: { y: aim, offsetY: 60 } });
+    document.querySelector(".js-mainheader").classList.remove("i-open");
+    document.querySelector(".js-hamburger").classList.remove("is-active");
 }
 
 // https://codepen.io/dbilanoski/pen/LabpzG - toDo

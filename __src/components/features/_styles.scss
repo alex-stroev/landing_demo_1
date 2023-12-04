@@ -1,6 +1,13 @@
 .features {
+    $spadd: (55/1000 * 100vw);
+    --spadd: 55px;
+    @media (max-width: 1000px) {
+        --spadd: #{$spadd};
+    }
+
     margin: 140px 0;
     background: url("../img/dots_red.svg") top 24px left no-repeat;
+    @include mobile_vertical_rhythm;
 
     &__kernel {
         max-width: (293px * 3) + 220;
@@ -8,30 +15,30 @@
     }
 
     &__preheader {
-        color: var(--color-red);
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 100%;
-        letter-spacing: 4.2px;
-        padding-bottom: (18em/20);
+        @extend .header_red;
     }
 
     &__header {
-        color: #031333;
-        text-align: center;
-        font-size: 38px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        padding-bottom: (72em/38);
+        @extend .header_black;
     }
 
     &__grid {
         display: flex;
-        justify-content: space-between;
-        gap: 110px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__grid-item {
+        padding: var(--spadd);
+        width: (100%/3);
+
+        @media (max-width: 768px) {
+            width: 50%;
+        }
+
+        @media (max-width: 400px) {
+            width: 100%;
+        }
     }
 }
 
@@ -55,6 +62,8 @@
         font-weight: 500;
         line-height: 100%;
         padding-bottom: (16em/28);
+
+        @include fluid_typo_auto(1000, 28, 22);
     }
 
     &__text {
@@ -63,5 +72,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 160%;
+
+        @include fluid_typo_auto(1000, 18, 16);
     }
 }

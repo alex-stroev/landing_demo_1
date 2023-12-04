@@ -180,7 +180,7 @@ template {
   display: none;
 }
 
-.header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader {
+.header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader, .features__preheader {
   color: var(--color-red);
   font-size: 20px;
   font-style: normal;
@@ -192,22 +192,22 @@ template {
   padding: 0 1em;
 }
 @media screen and (max-width: 1024px) {
-  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader {
+  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader, .features__preheader {
     font-size: 1.953125vw;
   }
 }
 @media screen and (max-width: 717px) {
-  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader {
+  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader, .features__preheader {
     font-size: 14px;
   }
 }
 @media (max-width: 1024px) {
-  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader {
+  .header_red, .team-members__meet, .projects__latest, .whoweare__preheader, .our-services__preheader, .features__preheader {
     margin-bottom: 1em;
   }
 }
 
-.header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header {
+.header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header, .features__header {
   color: #031333;
   text-align: center;
   font-size: 38px;
@@ -218,17 +218,17 @@ template {
   padding: 0 1em;
 }
 @media screen and (max-width: 1024px) {
-  .header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header {
+  .header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header, .features__header {
     font-size: 3.7109375vw;
   }
 }
 @media screen and (max-width: 647px) {
-  .header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header {
+  .header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header, .features__header {
     font-size: 24px;
   }
 }
 @media (max-width: 1024px) {
-  .header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header {
+  .header_black, .team-members__title, .projects__look, .whoweare__header, .our-services__header, .features__header {
     margin-bottom: 1em;
   }
 }
@@ -498,36 +498,43 @@ h6 {
 }
 
 .features {
+  --spadd: 55px;
   margin: 140px 0;
   background: url("../img/dots_red.svg") top 24px left no-repeat;
+}
+@media (max-width: 1000px) {
+  .features {
+    --spadd: 5.5vw;
+  }
+}
+@media (max-width: 1200px) {
+  .features {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+  }
 }
 .features__kernel {
   max-width: 1099px;
   margin: 0 auto;
 }
-.features__preheader {
-  color: var(--color-red);
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 4.2px;
-  padding-bottom: 0.9em;
-}
-.features__header {
-  color: #031333;
-  text-align: center;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
-  padding-bottom: 1.8947368421em;
-}
 .features__grid {
   display: flex;
-  justify-content: space-between;
-  gap: 110px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.features__grid-item {
+  padding: var(--spadd);
+  width: 33.3333333333%;
+}
+@media (max-width: 768px) {
+  .features__grid-item {
+    width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .features__grid-item {
+    width: 100%;
+  }
 }
 
 .feature {
@@ -549,12 +556,32 @@ h6 {
   line-height: 100%;
   padding-bottom: 0.5714285714em;
 }
+@media screen and (max-width: 1000px) {
+  .feature__title {
+    font-size: 2.8vw;
+  }
+}
+@media screen and (max-width: 786px) {
+  .feature__title {
+    font-size: 22px;
+  }
+}
 .feature__text {
   color: #949494;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+}
+@media screen and (max-width: 1000px) {
+  .feature__text {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 889px) {
+  .feature__text {
+    font-size: 16px;
+  }
 }
 
 .about {

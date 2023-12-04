@@ -1,4 +1,6 @@
 .hero {
+    --spadd: 32px;
+
     background-color: var(--color-dark);
     color: #fff;
     margin-bottom: 140px;
@@ -8,12 +10,18 @@
     background-repeat: no-repeat, no-repeat;
 
     &__kernel {
-        max-width: 1300px;
+        max-width: (1300px + 64);
+        padding: 0 var(--spadd);
         margin: 0 auto;
         display: flex;
         gap: 18px;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            gap: 0;
+        }
     }
 
     &__header {
@@ -25,7 +33,10 @@
         span {
             color: var(--color-red);
         }
+
+        @include fluid_typo_auto(1440, 58, 24);
     }
+
     &__text {
         color: #f4f3f3;
         // font-family: Inter;
@@ -34,6 +45,7 @@
         line-height: 160%;
         margin: (24em/16) 0;
     }
+
     &__button {
         width: 164px;
         a {
@@ -44,10 +56,12 @@
 
     &__info {
         flex: 1 1 0;
+        padding: 4em 0;
     }
 
     &__pic {
         flex: 1 1 0;
+        align-self: flex-end;
         img {
             max-width: 100%;
             height: auto;

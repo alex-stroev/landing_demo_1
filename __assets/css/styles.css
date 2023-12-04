@@ -434,6 +434,7 @@ h6 {
 }
 
 .hero {
+  --spadd: 32px;
   background-color: var(--color-dark);
   color: #fff;
   margin-bottom: 140px;
@@ -443,12 +444,19 @@ h6 {
   background-repeat: no-repeat, no-repeat;
 }
 .hero__kernel {
-  max-width: 1300px;
+  max-width: 1364px;
+  padding: 0 var(--spadd);
   margin: 0 auto;
   display: flex;
   gap: 18px;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 600px) {
+  .hero__kernel {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 .hero__header {
   font-size: 58px;
@@ -458,6 +466,16 @@ h6 {
 }
 .hero__header span {
   color: var(--color-red);
+}
+@media screen and (max-width: 1440px) {
+  .hero__header {
+    font-size: 4.0277777778vw;
+  }
+}
+@media screen and (max-width: 596px) {
+  .hero__header {
+    font-size: 24px;
+  }
 }
 .hero__text {
   color: #f4f3f3;
@@ -487,9 +505,11 @@ h6 {
 }
 .hero__info {
   flex: 1 1 0;
+  padding: 4em 0;
 }
 .hero__pic {
   flex: 1 1 0;
+  align-self: flex-end;
 }
 .hero__pic img {
   max-width: 100%;

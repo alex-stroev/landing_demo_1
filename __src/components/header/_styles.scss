@@ -18,7 +18,7 @@
         top: 0;
         left: 0;
         height: 100%;
-        width: (320px - 70);
+        width: (320px - 70 - 17); // - ham width - scrollbar width
         z-index: 999;
         box-shadow: 0 13px 31px rgba(12, 20, 33, 0.04),
             0 9.45547px 20.8947px rgba(12, 20, 33, 0.032),
@@ -31,6 +31,7 @@
         //
         transform: translateX(-100%);
         transition: 0.3s ease all;
+
         &.i-open {
             transform: translateX(0);
         }
@@ -68,7 +69,7 @@
         transition: all 0.3s ease;
 
         #{$b}.i-fixed & {
-            padding: 0 0;
+            padding: 0 16px;
         }
 
         @media #{$toggle} {

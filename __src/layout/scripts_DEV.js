@@ -17,5 +17,7 @@ function scroll2anchor(e) {
     gsap.to(window, { duration: 1, scrollTo: { y: aim, offsetY: 60 } });
 }
 
+// https://codepen.io/dbilanoski/pen/LabpzG - toDo
+
 import { gsapTeamMembers } from "../components/team-members/gsapTeamMembers";
 gsapTeamMembers();

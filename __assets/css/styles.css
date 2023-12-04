@@ -346,6 +346,96 @@ h6 {
   overflow-y: hidden;
 }
 
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 1;
+}
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+ * 3DY Reverse
+ */
+.hamburger--3dy .hamburger-box {
+  perspective: 80px;
+}
+.hamburger--3dy .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger--3dy.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg);
+}
+.hamburger--3dy.is-active .hamburger-inner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--3dy.is-active .hamburger-inner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
 .header {
   background-color: #fff;
 }
@@ -359,28 +449,91 @@ h6 {
           backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 999;
+    box-shadow: 0 13px 31px rgba(12, 20, 33, 0.04), 0 9.45547px 20.8947px rgba(12, 20, 33, 0.032), 0 6.58125px 13.5141px rgba(12, 20, 33, 0.027), 0 4.31641px 8.38574px rgba(12, 20, 33, 0.023), 0 2.6px 5.0375px rgba(12, 20, 33, 0.02), 0 1.37109px 2.99707px rgba(12, 20, 33, 0.017), 0 0.56875px 1.79219px rgba(12, 20, 33, 0.013), inset 0 2px 1px #fff;
+    transform: translateX(-100%);
+    transition: 0.3s ease all;
+  }
+  .header.i-open {
+    transform: translateX(0);
+  }
+}
+.header__burger {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header__burger {
+    display: block;
+    width: 70px;
+    height: 54px;
+    background-color: var(--color-red);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+  }
+}
+.header__burger button:focus {
+  outline: none;
+}
 .header__kernel {
-  max-width: 1200px;
+  max-width: 1232px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 24px 16px;
   transition: all 0.3s ease;
 }
 .header.i-fixed .header__kernel {
   padding: 0 0;
 }
+@media (max-width: 1024px) {
+  .header__kernel {
+    flex-direction: column;
+  }
+}
 .header__logo {
   width: 88px;
 }
-.header__menu {
+.header__menu ul {
   flex: 1 1 0;
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 1024px) {
+  .header__menu ul {
+    display: block;
+    margin: 2em 0 0 2em;
+  }
+}
+.header__menu ul li {
+  margin: 0 29px;
+}
+@media (max-width: 1024px) {
+  .header__menu ul li {
+    margin: 0 0 2em 0;
+  }
+}
+@media (max-width: 1024px) {
+  .header__menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 .header__menu a {
-  margin: 0 29px;
+  display: inline-block;
   color: #000;
   font-size: 16px;
   font-weight: 400;

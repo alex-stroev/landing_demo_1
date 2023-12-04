@@ -1,4 +1,5 @@
 .header {
+    $toggle: "(max-width: 1024px)";
     $b: ".header";
     background-color: #fff;
 
@@ -12,17 +13,66 @@
         background-color: rgba(#fff, 80%);
     }
 
+    @media #{$toggle} {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: (320px - 70);
+        z-index: 999;
+        box-shadow: 0 13px 31px rgba(12, 20, 33, 0.04),
+            0 9.45547px 20.8947px rgba(12, 20, 33, 0.032),
+            0 6.58125px 13.5141px rgba(12, 20, 33, 0.027),
+            0 4.31641px 8.38574px rgba(12, 20, 33, 0.023),
+            0 2.6px 5.0375px rgba(12, 20, 33, 0.02),
+            0 1.37109px 2.99707px rgba(12, 20, 33, 0.017),
+            0 0.56875px 1.79219px rgba(12, 20, 33, 0.013), inset 0 2px 1px #fff;
+
+        //
+        transform: translateX(-100%);
+        transition: 0.3s ease all;
+        &.i-open {
+            transform: translateX(0);
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @media #{$toggle} {
+            display: block;
+            $size: 32px;
+            width: 70px;
+            height: 54px;
+            background-color: var(--color-red);
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        button {
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
     &__kernel {
-        max-width: 1200px;
+        max-width: 1200px + 32px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 24px 0;
+        padding: 24px 16px;
         transition: all 0.3s ease;
 
         #{$b}.i-fixed & {
             padding: 0 0;
+        }
+
+        @media #{$toggle} {
+            flex-direction: column;
         }
     }
 
@@ -31,12 +81,36 @@
     }
 
     &__menu {
-        flex: 1 1 0;
-        display: flex;
-        justify-content: center;
+        ul {
+            flex: 1 1 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            @media #{$toggle} {
+                display: block;
+                margin: 2em 0 0 2em;
+            }
+
+            li {
+                margin: 0 (58px/2);
+
+                @media #{$toggle} {
+                    margin: 0 0 2em 0;
+                }
+            }
+        }
+
+        @media #{$toggle} {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+        }
 
         a {
-            margin: 0 (58px/2);
+            display: inline-block;
             color: #000;
             font-size: 16px;
             font-weight: 400;

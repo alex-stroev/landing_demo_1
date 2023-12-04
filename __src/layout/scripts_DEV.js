@@ -8,6 +8,9 @@ gsap.registerPlugin(ScrollToPlugin);
 import { fixHeader } from "../components/header/fixHeader";
 fixHeader(".js-mainheader");
 
+import { highlightAnchorLinks } from "../components/header/highlightAnchorLinks";
+highlightAnchorLinks();
+
 const anchorLinks = document.querySelectorAll(".header__menu a");
 anchorLinks.forEach((item) => item.addEventListener("click", scroll2anchor));
 
@@ -19,7 +22,6 @@ function scroll2anchor(e) {
     document.querySelector(".js-hamburger").classList.remove("is-active");
 }
 
-// https://codepen.io/dbilanoski/pen/LabpzG - toDo
 
 import { gsapTeamMembers } from "../components/team-members/gsapTeamMembers";
 gsapTeamMembers();

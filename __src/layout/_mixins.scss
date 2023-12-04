@@ -146,7 +146,8 @@
 
 @mixin mobile_vertical_rhythm {
     @media (max-width: 1200px) {
-        margin-top: 6vw;
-        margin-bottom: 6vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 6vw;
     }
 }

@@ -498,6 +498,9 @@ h6 {
 @media (max-width: 1024px) {
   .header__kernel {
     flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 .header__logo {
@@ -682,8 +685,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .features {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 .features__kernel {
@@ -773,8 +777,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .about {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 @media (max-width: 768px) {
@@ -896,8 +901,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .our-services {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 @media (max-width: 768px) {
@@ -1017,8 +1023,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .whoweare {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 @media (max-width: 1024px) {
@@ -1127,8 +1134,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .projects {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 .projects__grid {
@@ -1261,8 +1269,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .get-free-consultations {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 .get-free-consultations::after {
@@ -1363,8 +1372,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .team-members {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 @media (max-width: 1200px) {
@@ -1454,8 +1464,9 @@ h6 {
 }
 @media (max-width: 1200px) {
   .subscribe {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6vw;
   }
 }
 @media (max-width: 768px) {

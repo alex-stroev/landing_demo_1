@@ -1,5 +1,5 @@
 function fixHeader(
-    headerClass,
+    headerClass = ".js-mainheader",
     fixinClassOnDesktop = "i-fixed",
     openClassForMobile = "i-open",
     hamburgerClass = ".js-hamburger",
@@ -8,7 +8,6 @@ function fixHeader(
 ) {
     // TODO: учесть возможные верхний паддинг сиблинга и возможность нахождения перед хедером других блоков
 
-    console.log(headerClass);
     let header = document.querySelectorAll(headerClass);
     let hamburger = document.querySelectorAll(hamburgerClass)[0];
 

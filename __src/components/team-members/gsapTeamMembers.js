@@ -1,8 +1,6 @@
 const gsapTeamMembers = () => {
     const teamMembers = gsap.utils.toArray(".team-member");
 
-    console.log(teamMembers);
-
     if (window.matchMedia("(max-width: 768px)").matches) {
         // mobile view
 

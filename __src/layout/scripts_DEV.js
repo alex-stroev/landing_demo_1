@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
 import { fixHeader } from "../components/header/fixHeader";
-fixHeader(".js-mainheader");
+fixHeader();
 
 import { highlightAnchorLinks } from "../components/header/highlightAnchorLinks";
 highlightAnchorLinks();
@@ -21,7 +21,6 @@ function scroll2anchor(e) {
     document.querySelector(".js-mainheader").classList.remove("i-open");
     document.querySelector(".js-hamburger").classList.remove("is-active");
 }
-
 
 import { gsapTeamMembers } from "../components/team-members/gsapTeamMembers";
 gsapTeamMembers();

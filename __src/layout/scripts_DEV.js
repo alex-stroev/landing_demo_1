@@ -22,6 +22,8 @@ gsapAbout();
 import { gsapServices } from "../components/our-services/gsapServices.js";
 gsapServices();
 
+import { gsapWhoweare } from "../components/whoweare/gsapWhoweare.js";
+gsapWhoweare();
 /////////////////////////////////////////////////////////
 
 const anchorLinks = document.querySelectorAll(".header__menu a");

@@ -24,13 +24,13 @@ const gsapAbout = () => {
     );
     tl.fromTo(
         ".about-kv__pic1",
-        { y: "-100%", rotation: "-720", autoAlpha: 0 },
-        { y: 0, rotation: "0", autoAlpha: 1, duration: tlDuration * 2 }
+        { y: "-100%", autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: tlDuration * 2, ease: "bounce.out" }
     );
     tl.fromTo(
         ".about-kv__pic2",
-        { y: "100%", rotation: "-720", autoAlpha: 0 },
-        { y: 0, rotation: "0", autoAlpha: 1, duration: tlDuration * 3 }
+        { y: "100%", autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: tlDuration * 2, ease: "bounce.out" }
     );
 };
 

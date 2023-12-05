@@ -17,6 +17,9 @@ gsapHero();
 import { gsapFeatures } from "../components/features/gsapFeatures";
 gsapFeatures();
 
+import { gsapAbout } from "../components/about/gsapAbout.js";
+gsapAbout();
+
 /////////////////////////////////////////////////////////
 
 const anchorLinks = document.querySelectorAll(".header__menu a");

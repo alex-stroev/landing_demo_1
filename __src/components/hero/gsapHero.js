@@ -1,5 +1,5 @@
 const gsapHero = () => {
-    var tl = gsap
+    let tl = gsap
         .timeline
         // { repeat: 2, repeatDelay: 1 }
         ();

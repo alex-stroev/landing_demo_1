@@ -2,8 +2,7 @@
 //     console.log("loaded");
 //     /////////////////////////////////// end ready
 // });
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 import { fixHeader } from "../components/header/fixHeader";
 fixHeader();
@@ -19,6 +18,9 @@ gsapFeatures();
 
 import { gsapAbout } from "../components/about/gsapAbout.js";
 gsapAbout();
+
+import { gsapServices } from "../components/our-services/gsapServices.js";
+gsapServices();
 
 /////////////////////////////////////////////////////////
 

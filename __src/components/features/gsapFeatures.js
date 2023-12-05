@@ -1,19 +1,20 @@
-const gsapTeamMembers = () => {
-    const items = gsap.utils.toArray(".team-member");
+const gsapFeatures = () => {
+    const items = gsap.utils.toArray(".feature");
 
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        // mobile view
+    if (window.matchMedia("(max-width: 400px)").matches) {
+        // mobile
 
         items.forEach((item) => {
             gsap.fromTo(
                 item,
                 {
-                    y: "100%",
+                    scale: 0,
                 },
                 {
-                    y: 0,
+                    scale: 1,
                     autoAlpha: 1,
                     duration: 0.3,
+                    delay: 0.3,
                     scrollTrigger: {
                         trigger: item,
                     },
@@ -21,24 +22,24 @@ const gsapTeamMembers = () => {
             );
         });
     } else {
-        // desktop view
+        // desktop
         items &&
             gsap.fromTo(
                 items,
                 {
-                    y: "100%",
+                    scale: 0,
                 },
                 {
-                    scrollTrigger: ".team-members__grid",
+                    scrollTrigger: ".features__grid",
                     duration: 0.5,
-                    y: 0,
+                    scale: 1,
                     autoAlpha: 1,
                     stagger: 0.3,
-                    // delay: 1,
+                    delay: 0.3,
                     ease: "back.out(1.7)",
                 }
             );
     }
 };
 
-export { gsapTeamMembers };
+export { gsapFeatures };

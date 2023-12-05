@@ -146,8 +146,13 @@
 
 @mixin mobile_vertical_rhythm {
     @media (max-width: 1200px) {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 6vw;
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+        // padding-top: 6vw;
+    }
+}
+@mixin mobile_vertical_rhythm_add {
+    @media (max-width: 1200px) {
+        // padding-bottom: 6vw;
     }
 }

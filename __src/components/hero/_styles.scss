@@ -10,6 +10,10 @@
     background-repeat: no-repeat, no-repeat;
     overflow: hidden;
 
+    @include mobile_vertical_rhythm;
+
+    margin-top: 0;
+
     &__kernel {
         max-width: (1300px + 64);
         padding: 0 var(--spadd);

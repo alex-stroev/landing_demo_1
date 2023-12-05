@@ -14,6 +14,9 @@ highlightAnchorLinks();
 import { gsapHero } from "../components/hero/gsapHero";
 gsapHero();
 
+import { gsapFeatures } from "../components/features/gsapFeatures";
+gsapFeatures();
+
 /////////////////////////////////////////////////////////
 
 const anchorLinks = document.querySelectorAll(".header__menu a");

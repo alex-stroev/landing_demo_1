@@ -24,6 +24,9 @@ gsapServices();
 
 import { gsapWhoweare } from "../components/whoweare/gsapWhoweare.js";
 gsapWhoweare();
+
+import { gsapConsultations } from "../components/get-free-consultations/gsapConsultations.js";
+gsapConsultations();
 /////////////////////////////////////////////////////////
 
 const anchorLinks = document.querySelectorAll(".header__menu a");
@@ -51,3 +54,6 @@ function scroll2anchor(e) {
 
 import { gsapTeamMembers } from "../components/team-members/gsapTeamMembers";
 gsapTeamMembers();
+
+import { gsapSubscribe } from "../components/subscribe/gsapSubscribe.js";
+gsapSubscribe();

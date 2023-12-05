@@ -20,7 +20,7 @@ const gsapWhoweare = () => {
     tl.fromTo(
         ".whoweare-kv__badge",
         { y: "100%", autoAlpha: 0 },
-        { y: 0, autoAlpha: 1, duration: tlDuration * 2, ease: "bounce.out" }
+        { y: "15.3%", autoAlpha: 1, duration: tlDuration * 2, ease: "bounce.out" }
     );
 };
 

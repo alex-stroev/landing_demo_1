@@ -10,6 +10,9 @@ fixHeader();
 import { highlightAnchorLinks } from "../components/header/highlightAnchorLinks";
 highlightAnchorLinks();
 
+import { handleAnchorLinks } from "../components/header/handleAnchorLinks.js";
+handleAnchorLinks();
+
 import { gsapHero } from "../components/hero/gsapHero";
 gsapHero();
 
@@ -27,30 +30,6 @@ gsapWhoweare();
 
 import { gsapConsultations } from "../components/get-free-consultations/gsapConsultations.js";
 gsapConsultations();
-/////////////////////////////////////////////////////////
-
-const anchorLinks = document.querySelectorAll(".header__menu a");
-anchorLinks.forEach((item) => item.addEventListener("click", scroll2anchor));
-
-function scroll2anchor(e) {
-    // Проверяем, не активна ли первая ссылка, в зависимости от этого выбираем verticalOffset
-    const verticalOffset = document
-        .querySelector(".header__menu a[href='#home']")
-        .classList.contains("i-active")
-        ? 180
-        : 97;
-
-    e.preventDefault();
-    const aim = e.target.getAttribute("href");
-    gsap.to(window, {
-        duration: 1,
-        scrollTo: { y: aim, offsetY: verticalOffset },
-    });
-    document.querySelector(".js-mainheader").classList.remove("i-open");
-    document.querySelector(".js-hamburger").classList.remove("is-active");
-}
-
-/////////////////////////////////////////////////////////
 
 import { gsapTeamMembers } from "../components/team-members/gsapTeamMembers";
 gsapTeamMembers();

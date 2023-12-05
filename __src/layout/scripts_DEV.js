@@ -11,6 +11,11 @@ fixHeader();
 import { highlightAnchorLinks } from "../components/header/highlightAnchorLinks";
 highlightAnchorLinks();
 
+import { gsapHero } from "../components/hero/gsapHero";
+gsapHero();
+
+/////////////////////////////////////////////////////////
+
 const anchorLinks = document.querySelectorAll(".header__menu a");
 anchorLinks.forEach((item) => item.addEventListener("click", scroll2anchor));
 
@@ -21,6 +26,8 @@ function scroll2anchor(e) {
     document.querySelector(".js-mainheader").classList.remove("i-open");
     document.querySelector(".js-hamburger").classList.remove("is-active");
 }
+
+/////////////////////////////////////////////////////////
 
 import { gsapTeamMembers } from "../components/team-members/gsapTeamMembers";
 gsapTeamMembers();

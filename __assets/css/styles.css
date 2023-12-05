@@ -599,6 +599,7 @@ h6 {
   background-image: url("../img/dots_white.svg"), url("../img/dots_white.svg");
   background-position: bottom 24px left, right 12px top 24px;
   background-repeat: no-repeat, no-repeat;
+  overflow: hidden;
 }
 .hero__kernel {
   max-width: 1364px;

@@ -8,14 +8,16 @@ const gsapTeamMembers = () => {
             gsap.fromTo(
                 item,
                 {
+                    autoAlpha: 0,
                     y: "100%",
                 },
                 {
                     y: 0,
                     autoAlpha: 1,
                     duration: 0.3,
+                    delay: 0.5,
                     scrollTrigger: {
-                        trigger: item,
+                        trigger: item.closest(".team-members__grid-item"),
                     },
                 }
             );
@@ -26,6 +28,7 @@ const gsapTeamMembers = () => {
             gsap.fromTo(
                 items,
                 {
+                    autoAlpha: 0,
                     y: "100%",
                 },
                 {

@@ -1391,9 +1391,6 @@ h6 {
   }
 }
 
-.team-member {
-  visibility: hidden;
-}
 .team-member__photo {
   border-radius: 12px 12px 0 0;
   overflow: hidden;

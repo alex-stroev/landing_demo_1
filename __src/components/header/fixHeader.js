@@ -35,6 +35,7 @@ function fixHeader(
                 ////////////////////////////////////////////////////////////////////////////
                 // console.log("MOBILE");
                 header.classList.remove(fixinClassOnDesktop);
+                afterHeader.style.paddingTop = "";
             } else {
                 ////////////////////////////////////////////////////////////////////////////
                 //  DESKTOP

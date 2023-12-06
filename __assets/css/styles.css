@@ -602,6 +602,11 @@ h6 {
   overflow: hidden;
   margin-top: 0;
 }
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 5.46875vw;
+  }
+}
 .hero__kernel {
   max-width: 1364px;
   padding: 0 var(--spadd);

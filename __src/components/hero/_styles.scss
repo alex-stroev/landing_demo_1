@@ -11,6 +11,10 @@
     overflow: hidden;
     margin-top: 0;
 
+    @media (max-width: 1024px) {
+        padding-top: (56/1024 * 100vw);
+    }
+
     &__kernel {
         max-width: (1300px + 64);
         padding: 0 var(--spadd);

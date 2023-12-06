@@ -923,17 +923,6 @@ h6 {
 .our-services__header {
   color: #fff;
 }
-.our-services__grid {
-  display: flex;
-  gap: var(--gap);
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .our-services__grid {
-    flex-direction: column;
-  }
-}
-
 .our-service {
   aspect-ratio: 514/639;
   position: relative;

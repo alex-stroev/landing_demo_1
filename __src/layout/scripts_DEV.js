@@ -25,6 +25,9 @@ gsapAbout();
 import { gsapServices } from "../components/our-services/gsapServices.js";
 gsapServices();
 
+import { swiperOnServices } from "../components/our-services/swiperOnServices.js";
+swiperOnServices();
+
 import { gsapWhoweare } from "../components/whoweare/gsapWhoweare.js";
 gsapWhoweare();
 

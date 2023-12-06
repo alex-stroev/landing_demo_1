@@ -3,13 +3,11 @@
 
     background-color: var(--color-dark);
     color: #fff;
-    margin-bottom: 140px;
     padding-top: 56px;
     background-image: url("../img/dots_white.svg"), url("../img/dots_white.svg");
     background-position: bottom 24px left, right 12px top 24px;
     background-repeat: no-repeat, no-repeat;
     overflow: hidden;
-    margin-top: 0;
 
     @media (max-width: 1024px) {
         padding-top: (56/1024 * 100vw);

@@ -1,9 +1,12 @@
 .about {
     --spadd: 32px;
+    --gap: 72px;
     $spadd: (32/1024 * 100vw);
+    $gap: (72/1024 * 100vw);
 
     @media (max-width: 1024px) {
         --spadd: #{$spadd};
+        --gap: #{$gap};
     }
 
     max-width: (1060px + 64);
@@ -14,7 +17,7 @@
 
     display: flex;
     justify-content: space-between;
-    gap: 72px;
+    gap: var(--gap);
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;

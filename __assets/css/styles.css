@@ -594,13 +594,11 @@ h6 {
   --spadd: 32px;
   background-color: var(--color-dark);
   color: #fff;
-  margin-bottom: 140px;
   padding-top: 56px;
   background-image: url("../img/dots_white.svg"), url("../img/dots_white.svg");
   background-position: bottom 24px left, right 12px top 24px;
   background-repeat: no-repeat, no-repeat;
   overflow: hidden;
-  margin-top: 0;
 }
 @media (max-width: 1024px) {
   .hero {
@@ -770,16 +768,18 @@ h6 {
 
 .about {
   --spadd: 32px;
+  --gap: 72px;
   max-width: 1124px;
   margin: 140px auto;
   padding: 0 var(--spadd);
   display: flex;
   justify-content: space-between;
-  gap: 72px;
+  gap: var(--gap);
 }
 @media (max-width: 1024px) {
   .about {
     --spadd: 3.125vw;
+    --gap: 7.03125vw;
   }
 }
 @media (max-width: 1200px) {

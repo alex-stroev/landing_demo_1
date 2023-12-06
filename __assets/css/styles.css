@@ -602,12 +602,6 @@ h6 {
   overflow: hidden;
   margin-top: 0;
 }
-@media (max-width: 1200px) {
-  .hero {
-    margin-top: 6vw;
-    margin-bottom: 6vw;
-  }
-}
 .hero__kernel {
   max-width: 1364px;
   padding: 0 var(--spadd);
@@ -1143,22 +1137,6 @@ h6 {
     margin-bottom: 6vw;
   }
 }
-.projects__grid {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-@media (max-width: 1440px) {
-  .projects__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (max-width: 600px) {
-  .projects__grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
 .project {
   position: relative;
   background-color: var(--color-dark);

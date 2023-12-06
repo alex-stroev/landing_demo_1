@@ -28,6 +28,9 @@ gsapServices();
 import { gsapWhoweare } from "../components/whoweare/gsapWhoweare.js";
 gsapWhoweare();
 
+import { swiperOnProjects } from "../components/projects/swiperOnProjects.js";
+swiperOnProjects();
+
 import { gsapConsultations } from "../components/get-free-consultations/gsapConsultations.js";
 gsapConsultations();
 

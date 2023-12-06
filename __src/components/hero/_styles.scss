@@ -9,9 +9,6 @@
     background-position: bottom 24px left, right 12px top 24px;
     background-repeat: no-repeat, no-repeat;
     overflow: hidden;
-
-    @include mobile_vertical_rhythm;
-
     margin-top: 0;
 
     &__kernel {

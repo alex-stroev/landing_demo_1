@@ -1,4 +1,7 @@
 .projects {
+    @include swiper_nofouc(4);
+    @include mobile_vertical_rhythm;
+
     $gap_mobile: (32/1440 * 100vw);
     --gap: 32px;
 
@@ -9,7 +12,6 @@
     max-width: (383px * 4 + 32 * 5);
     padding: 0 var(--gap);
     margin: 200px auto 128px;
-    @include mobile_vertical_rhythm;
 
     &__latest {
         @extend .header_red;

@@ -899,6 +899,21 @@ h6 {
   padding: 120px var(--sidepadd);
   margin: 140px 0 160px;
 }
+.our-services .swiper:not(.swiper-initialized) .swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 600px) {
+  .our-services .swiper:not(.swiper-initialized) .swiper-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+@media (max-width: 414px) {
+  .our-services .swiper:not(.swiper-initialized) .swiper-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
 @media (max-width: 1024px) {
   .our-services {
     --sidepadd: 3.125vw;
@@ -1120,15 +1135,30 @@ h6 {
   padding: 0 var(--gap);
   margin: 200px auto 128px;
 }
-@media (max-width: 1440px) {
-  .projects {
-    --gap: 2.2222222222vw;
+.projects .swiper:not(.swiper-initialized) .swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .projects .swiper:not(.swiper-initialized) .swiper-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 414px) {
+  .projects .swiper:not(.swiper-initialized) .swiper-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 @media (max-width: 1200px) {
   .projects {
     margin-top: 6vw;
     margin-bottom: 6vw;
+  }
+}
+@media (max-width: 1440px) {
+  .projects {
+    --gap: 2.2222222222vw;
   }
 }
 .project {

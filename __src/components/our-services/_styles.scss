@@ -1,4 +1,6 @@
 .our-services {
+    @include swiper_nofouc(2, 24px, 600px, 1);
+
     --sidepadd: 32px;
     --gap: 52px;
     position: relative;

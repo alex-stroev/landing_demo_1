@@ -72,6 +72,37 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////
+// Prevent Swiper F.O.U.C.
+//////////////////////////////////////////////////////////////////////////////
+
+@mixin swiper_nofouc(
+    $cols: 2,
+    $gap: 24px,
+    $bp1: 768px,
+    $cols1: 2,
+    $bp2: 414px,
+    $cols2: 1
+) {
+    .swiper {
+        &:not(.swiper-initialized) {
+            .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat($cols, minmax(0, 1fr));
+                gap: $gap;
+
+                @media (max-width: $bp1) {
+                    grid-template-columns: repeat($cols1, minmax(0, 1fr));
+                }
+
+                @media (max-width: $bp2) {
+                    grid-template-columns: repeat($cols2, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}
+
 /////////////////////////////////////////////////////////////
 ///
 /////////////////////////////////////////////////////////////

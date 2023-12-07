@@ -12,7 +12,22 @@
             <div class="hero__button"><a href="">Our Services</a></div>
         </div>
         <div class="hero__pic">
-            <img src="__assets/img/hero/hero.png" alt="" />
+            <picture>
+                <source
+                    srcset="
+                        __assets/img/hero/hero.webp,
+                        __assets/img/hero/hero@2x.webp 2x
+                    "
+                    type="image/webp"
+                />
+                <img
+                    src="__assets/img/hero/hero.png"
+                    srcset="__assets/img/hero/hero@2x.png 2x"
+                    width="648"
+                    height="620"
+                    alt="Hero unit"
+                />
+            </picture>
         </div>
     </div>
 </div>

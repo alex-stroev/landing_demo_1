@@ -1,53 +1,53 @@
 @function strip-unit($number) {
-    @if type-of($number) == "number" and not unitless($number) {
-        @return $number / ($number * 0 + 1);
-    }
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
 
-    @return $number;
+  @return $number;
 }
 
 /////////////////////////////////////////////////////////////
 /// Вспомнить назначение
 /////////////////////////////////////////////////////////////
 @mixin fs($fs, $lh) {
-    font-size: strip-unit($fs) * 1px;
-    line-height: (strip-unit($lh) / strip-unit($fs));
+  font-size: strip-unit($fs) * 1px;
+  line-height: (strip-unit($lh) / strip-unit($fs));
 }
 
 /////////////////////////////////////////////////////////////
 /// Типографика
 /////////////////////////////////////////////////////////////
 @mixin fluid_typo($startwidth, $startsize, $endwidth, $endsize) {
-    $startwidth: (strip-unit($startwidth));
-    $startsize: (strip-unit($startsize));
-    $endwidth: (strip-unit($endwidth));
-    $endsize: (strip-unit($endsize));
+  $startwidth: (strip-unit($startwidth));
+  $startsize: (strip-unit($startsize));
+  $endwidth: (strip-unit($endwidth));
+  $endsize: (strip-unit($endsize));
 
-    @media screen and (max-width: ($startwidth * 1px)) {
-        font-size: ($startsize/$startwidth * 100vw);
-    }
+  @media screen and (max-width: ($startwidth * 1px)) {
+    font-size: ($startsize/$startwidth * 100vw);
+  }
 
-    @media screen and (max-width: ($endwidth * 1px)) {
-        font-size: ($endsize * 1px);
-    }
+  @media screen and (max-width: ($endwidth * 1px)) {
+    font-size: ($endsize * 1px);
+  }
 }
 
 /////////////////////////////////////////////////////////////
 /// Типографика - авто
 /////////////////////////////////////////////////////////////
 @mixin fluid_typo_auto($startwidth, $startsize, $endsize) {
-    $startwidth: (strip-unit($startwidth));
-    $startsize: (strip-unit($startsize));
-    $endsize: (strip-unit($endsize));
-    $endwidth: round($startwidth * $endsize/$startsize);
+  $startwidth: (strip-unit($startwidth));
+  $startsize: (strip-unit($startsize));
+  $endsize: (strip-unit($endsize));
+  $endwidth: round($startwidth * $endsize/$startsize);
 
-    @media screen and (max-width: ($startwidth * 1px)) {
-        font-size: ($startsize/$startwidth * 100vw);
-    }
+  @media screen and (max-width: ($startwidth * 1px)) {
+    font-size: ($startsize/$startwidth * 100vw);
+  }
 
-    @media screen and (max-width: ($endwidth * 1px)) {
-        font-size: ($endsize * 1px);
-    }
+  @media screen and (max-width: ($endwidth * 1px)) {
+    font-size: ($endsize * 1px);
+  }
 }
 
 /////////////////////////////////////////////////////////////
@@ -55,21 +55,21 @@
 /////////////////////////////////////////////////////////////
 
 @mixin text_link_bg($c1: red, $c2: lime, $trans: 300ms) {
-    overflow: hidden;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
 
-    background-image: linear-gradient(to right, $c2, $c2 50%, $c1 50%);
-    background-origin: padding-box;
-    background-position: 100%;
-    background-repeat: repeat;
-    background-size: 200% 100%;
-    background-clip: text;
-    transition: background-position $trans ease-out;
+  background-image: linear-gradient(to right, $c2, $c2 50%, $c1 50%);
+  background-origin: padding-box;
+  background-position: 100%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+  background-clip: text;
+  transition: background-position $trans ease-out;
 
-    &:hover,
-    &:active {
-        background-position: 0;
-    }
+  &:hover,
+  &:active {
+    background-position: 0;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -77,30 +77,30 @@
 //////////////////////////////////////////////////////////////////////////////
 
 @mixin swiper_nofouc(
-    $cols: 2,
-    $gap: 24px,
-    $bp1: 768px,
-    $cols1: 2,
-    $bp2: 414px,
-    $cols2: 1
+  $cols: 2,
+  $gap: 24px,
+  $bp1: 768px,
+  $cols1: 2,
+  $bp2: 414px,
+  $cols2: 1
 ) {
-    .swiper {
-        &:not(.swiper-initialized) {
-            .swiper-wrapper {
-                display: grid;
-                grid-template-columns: repeat($cols, minmax(0, 1fr));
-                gap: $gap;
+  .swiper {
+    &:not(.swiper-initialized) {
+      .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat($cols, minmax(0, 1fr));
+        gap: $gap;
 
-                @media (max-width: $bp1) {
-                    grid-template-columns: repeat($cols1, minmax(0, 1fr));
-                }
-
-                @media (max-width: $bp2) {
-                    grid-template-columns: repeat($cols2, minmax(0, 1fr));
-                }
-            }
+        @media (max-width: $bp1) {
+          grid-template-columns: repeat($cols1, minmax(0, 1fr));
         }
+
+        @media (max-width: $bp2) {
+          grid-template-columns: repeat($cols2, minmax(0, 1fr));
+        }
+      }
     }
+  }
 }
 
 /////////////////////////////////////////////////////////////
@@ -108,11 +108,11 @@
 /////////////////////////////////////////////////////////////
 ///
 @mixin abs100 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /////////////////////////////////////////////////////////////
@@ -123,68 +123,68 @@
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 @mixin button {
-    text-decoration: none;
-    display: block;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    background-color: var(--color-red);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 100%;
-    transition: var(--trans300);
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  background-color: var(--color-red);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  transition: var(--trans300);
 
-    &:hover,
-    &:active {
-        background-color: var(--color-hover);
-    }
+  &:hover,
+  &:active {
+    background-color: var(--color-hover);
+  }
 }
 
 .header_red {
-    color: var(--color-red);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 4.2px;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 0 1em;
+  color: var(--color-red);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 4.2px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 1em;
 
-    @include fluid_typo_auto(1024, 20, 14);
+  @include fluid_typo_auto(1024, 20, 14);
 
-    @media (max-width: 1024px) {
-        margin-bottom: 1em;
-    }
+  @media (max-width: 1024px) {
+    margin-bottom: 1em;
+  }
 }
 
 .header_black {
-    color: #031333;
-    text-align: center;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: (80em/38);
-    padding: 0 1em;
+  color: #031333;
+  text-align: center;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: (80em/38);
+  padding: 0 1em;
 
-    @include fluid_typo_auto(1024, 38, 24);
+  @include fluid_typo_auto(1024, 38, 24);
 
-    @media (max-width: 1024px) {
-        margin-bottom: 1em;
-    }
+  @media (max-width: 1024px) {
+    margin-bottom: 1em;
+  }
 }
 
 @mixin mobile_vertical_rhythm {
-    @media (max-width: 1200px) {
-        margin-top: 6vw;
-        margin-bottom: 6vw;
-    }
+  @media (max-width: 1200px) {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+  }
 }
 @mixin mobile_vertical_rhythm_add {
-    @media (max-width: 1200px) {
-        // padding-bottom: 6vw;
-    }
+  @media (max-width: 1200px) {
+    // padding-bottom: 6vw;
+  }
 }
 
 // test
